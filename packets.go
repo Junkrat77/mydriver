@@ -278,6 +278,7 @@ func (mc *mysqlConn) readHandshakePacket() (data []byte, plugin string, err erro
 // http://dev.mysql.com/doc/internals/en/connection-phase-packets.html#packet-Protocol::HandshakeResponse
 func (mc *mysqlConn) writeHandshakeResponsePacket(authResp []byte, plugin string) error {
 	// Adjust client flags based on server support
+	var clientSupportOracleMode clientFlag = 1 << 27
 	clientFlags := clientProtocol41 |
 		clientSecureConn |
 		clientLongPassword |
@@ -285,6 +286,7 @@ func (mc *mysqlConn) writeHandshakeResponsePacket(authResp []byte, plugin string
 		clientLocalFiles |
 		clientPluginAuth |
 		clientMultiResults |
+		clientSupportOracleMode |
 		mc.flags&clientLongFlag
 
 	if mc.cfg.ClientFoundRows {

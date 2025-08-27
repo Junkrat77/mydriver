@@ -1,4 +1,13 @@
-# Go-MySQL-Driver
+This project is a fork of [go-sql-driver/mysql](https://github.com/go-sql-driver/mysql), 
+originally licensed under the Mozilla Public License 2.0.
+
+### Modifications Made
+- Changed module name from `github.com/go-sql-driver/mysql` to `github.com/junkrat77/mydriver`
+- Add clientSupportOracleMode client flag
+- Add go.mod file
+
+Original README.md:
+## Go-MySQL-Driver
 
 A MySQL-Driver for Go's [database/sql](https://golang.org/pkg/database/sql/) package
 

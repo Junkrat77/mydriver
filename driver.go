@@ -1,4 +1,5 @@
 // Copyright 2012 The Go-MySQL-Driver Authors. All rights reserved.
+// Modifications copyright (c) 2025 by Junkrat77
 //
 // This Source Code Form is subject to the terms of the Mozilla Public
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
@@ -81,7 +82,7 @@ func (d MySQLDriver) Open(dsn string) (driver.Conn, error) {
 }
 
 func init() {
-	sql.Register("mysql", &MySQLDriver{})
+	sql.Register("mydriver", &MySQLDriver{})
 }
 
 // NewConnector returns new driver.Connector.

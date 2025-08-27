@@ -1,0 +1,22 @@
+# NOTICE
+
+This project contains code derived from:
+
+## Original Project
+- **Project**: [go-sql-driver/mysql](https://github.com/go-sql-driver/mysql)
+- **URL**: https://github.com/go-sql-driver/mysql
+- **License**: Mozilla Public License 2.0
+- **Fork Point**: Tag v1.7.0
+
+## Modifications
+This fork includes the following modifications:
+
+### Modified Files:
+- `driver.go` - modify the driver name to "mydriver"
+- `packets.go` - add clientSupportOracleMode client flag
+- `go.mod` - Changed module name
+
+
+## License Compliance
+All source code in this repository is subject to the terms of the Mozilla Public License 2.0.
+The complete license text is available in the LICENSE file.
